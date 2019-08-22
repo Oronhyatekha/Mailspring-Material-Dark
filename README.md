@@ -2,7 +2,7 @@
 
 A theme for Mailspring inspired by material dark interface for personal use.
 
-<img src="https://raw.githubusercontent.com/Oronhyatekha/Mailspring-Material-Dark/master/screenshot/preview.png" />
+<img src="https://raw.githubusercontent.com/Oronhyatekha/Mailspring-Material-Dark/master/screenshot/Preview.png"/>
 
 ## Installation
 
