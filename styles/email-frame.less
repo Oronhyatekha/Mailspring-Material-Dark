@@ -1,0 +1,105 @@
+@import 'ui-variables';
+
+#message-list {
+	.mail-label.removable {
+		-webkit-filter: none;
+		filter: none;
+		color: @text-color !important;
+		background: @accent-primary!important;
+		border-radius: @base-border-radius;
+		box-shadow: none !important;
+		&:hover {
+			color: @text-color !important;
+			img.x.content-mask {
+				background-color: @text-color !important;
+			}
+		}
+	}
+	.message-item-wrap {
+		.message-item-white-wrap {
+			//background: @background-primary;
+			border-radius: @base-border-radius;
+			color: @text-color;
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 1px 25px rgba(0, 0, 0, 0.05);
+		}
+	}
+	.button-dropdown.bordered {
+		.secondary-items {
+			.menu {
+				.item {
+					background: @background-tertiary;
+					&:hover {
+						background: @accent-primary !important;
+						color: @text-color !important;
+						img.content-mask {
+							background-color: @text-color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// CONTACT SIDEBAR (on the right)
+.column-MessageListSidebar {
+	border: none;
+	color: @text-color;
+	margin-right: 6px;
+	div[name=unsafe-component-wrapper] {
+		order: 2 !important;
+	}
+	.sidebar-participant-picker {
+		select {
+			background: transparent;
+			border: 1px solid transparent;
+		}
+	}
+	.participant-profile {
+		.profile-photo-wrap {
+			width: 70px;
+			height: 70px;
+			padding: 5px;
+			top: -46px;
+			left: calc(~'50% - 35px');
+			border-radius: 100%;
+			background: @background-primary;
+			box-shadow: none;
+			.profile-photo,
+			.default-profile-image {
+				line-height: 60px;
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				box-shadow: none;
+				background-image: none;
+			}
+			.personal-info {
+				padding-top: 50px;
+			}
+		}
+	}
+	.sidebar-section {
+		background: @background-primary;
+		border-radius: @base-border-radius;
+		border: none;
+		margin-top: 12px;
+		.related-threads {
+			margin-top: 0;
+			.related-thread:hover {
+				background: @accent-primary;
+				color: @text-color;
+			}
+		}
+		.btn {
+			background: transparent;
+			border: 1px solid @gray-base;
+			box-shadow: none;
+			&:hover,
+			&:active {
+				background: @gray-base;
+				color: @white;
+			}
+		}
+	}
+}

@@ -1,0 +1,176 @@
+@import 'base/ui-variables';
+
+//------------------------------------------------------------
+// Sidebar headings
+//------------------------------------------------------------
+.nylas-outline-view {
+	.heading {
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: @text-color-subtle;
+
+		.add-item-button {
+			margin-top: -2px;
+
+			img.content-mask {
+				background-color: @text-color-subtle;
+				margin-top: 4px;
+			}
+
+			&:hover {
+				img.content-mask {
+					background-color: @text-color;
+					margin-top: 4px;
+				}
+			}
+		}
+
+		.collapse-button:hover {
+			color: @text-color;
+		}
+	}
+
+	&:not(:first-of-type) .heading {
+		margin-top: 16px;
+	}
+}
+
+
+//Scrollbars
+
+body {
+	background: @background-secondary;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+	border: none;
+}
+
+::-webkit-scrollbar-track {
+	background: darken(@background-secondary, 5%);
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	border-radius: 8px;
+	border: 1px solid darken(@background-secondary, 5%) !important;
+	background: lighten(@background-secondary, 3%) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: @accent-primary !important;
+}
+
+
+
+.scrollbar-track {
+	width: 14px;
+	background: transparent;
+	border: none;
+}
+
+.scrollbar-track-inner {
+	background: darken(@background-secondary, 5%);
+	border-radius: 14px;
+}
+
+.scrollbar-handle {
+	cursor: pointer;
+	border-radius: 14px;
+	border: 1px solid darken(@background-secondary, 5%) !important;
+	background: lighten(@background-secondary, 3%) !important;
+}
+
+.scrollbar-handle:hover {
+	background: @accent-primary !important;
+}
+
+//Text Selection
+
+::selection, ::-webkit-selection {
+	background: @accent-primary;
+	color: #fff;
+}
+
+
+#account-switcher {
+	.primary-item .name {
+		color: @gray-base;
+	}
+}
+
+.account-switcher {
+	-webkit-filter: brightness(300%);
+	filter: brightness(300%);
+}
+
+.scroll-region-content {
+	background: @background-secondary;
+}
+
+.sidebar-activity {
+	background: @background-secondary;
+	box-shadow: none;
+	color: @gray-darker;
+}
+
+.account-sidebar-sections {
+	background-color: transparent !important;
+	section {
+		&:first-child .heading {
+			padding-right: 40px;
+		}
+		.heading {
+			padding-bottom: 5px;
+			.text {
+				flex: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		.item-container {
+			margin: 4px 10px 0 0 !important;
+			.disclosure-triangle {
+				display: flex;
+				align-items: center;
+				width: 15px;
+				div {
+					border-left-color: darken(@gray-darker, 40%);
+					border-top-width: 3px;
+					border-bottom-width: 3px;
+					border-left-width: 5px;
+					transform-origin: 2px;
+				}
+			}
+			.item {
+				padding: 0 10px !important;
+				color: @gray-darker !important;
+				cursor: pointer !important;
+				.item-count-box {
+					background: @gray-darker !important;
+					color: @background-secondary !important;
+					box-shadow: 0 0.5px 0 @gray-darker, 0 -0.5px 0 @gray-darker, 0.5px 0 0 @gray-darker, -0.5px 0 0 @gray-darker !important;
+				}
+				&.selected {
+					background: @accent-primary !important;
+					border-radius: @base-border-radius;
+					color: @gray-darker !important;
+					.item-count-box {
+						background: @gray-darker !important;
+						color: @accent-primary !important;
+						box-shadow: 0 0.5px 0 @gray-darker, 0 -0.5px 0 @gray-darker, 0.5px 0 0 @gray-darker, -0.5px 0 0 @gray-darker !important;
+					}
+					.icon {
+						img {
+							background: @gray-darker !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

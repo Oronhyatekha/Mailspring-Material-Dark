@@ -1,0 +1,14 @@
+{
+  "name": "material-dark",
+  "title": "Material Dark",
+  "displayName": "Material Dark",
+  "theme": "ui",
+  "version": "0.1.0",
+  "description": "A great dark theme, that fits the material design",
+  "license": "GPL-3.0",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}
+
