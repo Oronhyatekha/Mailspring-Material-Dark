@@ -3,9 +3,24 @@
 .thread-list,
 .draft-list {
 	.list-container {
+		.list-item {
+			.mail-important-icon,
+			.thread-icon-star,
+			.draft-icon {
+				-webkit-filter: none;
+				filter: none;
+			}
+			&.focused {
+				.thread-icon-star {
+					-webkit-filter: none
+					filter: none;
+					}
+				}
+			}
 		.scroll-region-content .scroll-region-content-inner .list-rows {
 			.list-item {
 				background-color: @background-primary !important;
+				border-bottom: 1px solid lighten(@background-primary, 5%);
 				//color: @text-color !important;
 				.mail-label {
 					-webkit-filter: none;
@@ -16,11 +31,16 @@
 					box-shadow: none !important;
 				}
 				&.focused {
+					-webkit-filter: none;
+					filter: none;
 					color: @text-color !important;
-					background-color: @accent-primary !important;
+					background-color: @background-tertiary !important;
+					border-left: 3px solid @accent-primary;
+					border-bottom: none;
+					
 					.mail-label {
 						color: @text-color !important;
-						background-color: @accent-primary-dark !important;
+						background-color: @accent-primary !important;
 					}
 				}
 				&.selected {
